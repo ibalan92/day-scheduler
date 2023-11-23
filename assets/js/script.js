@@ -14,8 +14,13 @@ else {
 }
 
 function currentTime() {
-    var hour = dayjs().format('H');
-    return hour;
+    var hour = parseInt(dayjs().format('H'));
+    if (hour>17){
+        $("textarea").attr("class", "past");
+    }
+    else if(hour<9){
+        $("textarea").attr("class", "future");
+    }
   }
 
 setInterval(currentTime, 1000);
