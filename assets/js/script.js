@@ -12,3 +12,11 @@ else if (remainder % 10 ===3){
 else {
     $("#currentDay").text(today.format("dddd, MMMM D")+"th");
 }
+
+function currentTime() {
+    var hour = dayjs().format('H');
+    return hour;
+  }
+
+setInterval(currentTime, 1000);
+
