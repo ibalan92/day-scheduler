@@ -1,3 +1,4 @@
+
 var today = dayjs();
 var remainder = parseInt(today.format("DD"));
 if(remainder % 10 ===1){
@@ -67,4 +68,59 @@ function currentTime() {
   }
 
 setInterval(currentTime, 1000);
+
+
+$('#button1').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task1", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task1"));
+});
+
+$('#button2').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task2", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task2"));
+});
+
+$('#button3').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task3", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task3"));
+});
+
+$('#button4').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task4", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task4"));
+});
+
+$('#button5').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task5", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task5"));
+});
+
+$('#button6').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task6", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task6"));
+});
+
+$('#button7').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task7", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task7"));
+});
+
+$('#button8').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task8", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task8"));
+});
+
+$('#button9').on('click', function() {
+    var textareaEl = $(this).siblings('.col').find('textarea');
+    window.localStorage.setItem("task9", textareaEl.val());
+    textareaEl.val(window.localStorage.getItem("task9"));
+});
 
