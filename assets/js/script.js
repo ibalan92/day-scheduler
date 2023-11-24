@@ -1,4 +1,4 @@
-
+//Display the current date with ordinal number
 var today = dayjs();
 var remainder = parseInt(today.format("DD"));
 if(remainder % 10 ===1){
@@ -14,6 +14,7 @@ else {
     $("#currentDay").text(today.format("dddd, MMMM D")+"th");
 }
 
+//Function that manipulates the textarea colour depending on time
 function currentTime() {
     var hour = parseInt(dayjs().format('H'));
     if (hour>17){
@@ -75,13 +76,16 @@ function currentTime() {
     }
   }
 
+  //Runs the time
 setInterval(currentTime, 1000);
 
+//Check if there is anything in localstorage and displays it when page is refreshed
 var task1 = window.localStorage.getItem("task1")
 if (task1 !==""){
     $('#textarea1').val(task1);
 }
 
+//Saves the new task in local storage and displays it.
 $('#button1').on('click', function() {
     var textareaEl = $(this).siblings('.col').find('textarea');
     window.localStorage.setItem("task1", textareaEl.val());
